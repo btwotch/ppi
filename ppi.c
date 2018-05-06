@@ -47,9 +47,9 @@ void print_percent_progress(char *txt, int p)
 			printf("|");
 			continue;
 		}
-		if ((100*(i-begin)/width) < p)
+		if ((100*(i-begin)/(width-begin)) < p)
 		{
-			if ((100*(i+1-begin)/width) < p)
+			if ((100*(i+1-begin)/(width-begin)) < p)
 				printf("-");
 			else
 				printf(">");
